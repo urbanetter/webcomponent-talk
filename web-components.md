@@ -321,5 +321,14 @@ Shadow DOM is in general not stylable from outside. There are some non-standardi
 
 ---
 
+# Starting points
+
+* http://webcomponents.org/
+* http://www.polymer-project.org/
+* http://mozbrick.github.io/
+* http://googlewebcomponents.github.io/
+
+---
+
 # Thx.
 
