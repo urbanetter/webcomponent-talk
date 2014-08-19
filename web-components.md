@@ -302,3 +302,24 @@ Shadow DOM is in general not stylable from outside. There are some non-standardi
 </polymer-element>
 })
 ```
+
+---
+
+# Polymer: bindings
+
+```html
+<my-backend-segment duration="{{duration}}" start="{{start}}" end="{{end}}">
+<my-timeline duration="{{duration}}">
+    <my-timeline-segment start="{{start}}" end="{{end}}">
+</my-timeline>
+```
+`my-backend-segment` encapsulates the backend API. Attributes are bound together.
+
+---
+
+# [fit] Doesn't this make sense?
+
+---
+
+# Thx.
+
