@@ -71,7 +71,11 @@ at some point, hopefully...
 
 # Yes, because
 
-A future where you pick your HTML components like a backend library (eg. Serializer, Guzzle, ...) and do a `bower install` and lets you use this HTML component **has** to excite you.
+This future *has* to excite you:
+
+1. Find nice and matching web component for your UI problem
+2. Add it to your bower.json, install it
+3. Use it in your HTML as it would be part of the HTML standard
 
 ---
 
@@ -140,7 +144,7 @@ https://github.com/Polymer/platform
 
 # Libraries
 
-* Polymer from Google
+* Polymer
 * Mozilla Bricks
 * X-Tags
 
@@ -212,7 +216,11 @@ mkdir my-timeline
 
 # Templates (or shadow DOM)
 
-The HTML in the template is not visible from outside. Also, the id does not collide with outside id.
+HTML in template is implementation detail of component. It is called
+
+## Shadow DOM
+
+and not visible from outside DOM (light DOM).
 
 ---
 
@@ -240,7 +248,7 @@ This CSS is not visible from outside. (Shadow DOM)
 
 ---
 
-# But... how do I style the segment?
+# How do I style the segment?
 
 Shadow DOM is in general not stylable from outside. There are some non-standardized ways to "cross" into shadow DOM:
 
@@ -327,6 +335,7 @@ Shadow DOM is in general not stylable from outside. There are some non-standardi
 * http://www.polymer-project.org/
 * http://mozbrick.github.io/
 * http://googlewebcomponents.github.io/
+* http://component.kitchen/
 
 ---
 
