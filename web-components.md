@@ -4,12 +4,8 @@
 
 # What are web components?
 
-
----
-
-# Basically: **widgets**
-
-Called "components"
+* Custom HTML element
+* Widgets
 
 ```html
 <fancy-card>
@@ -75,7 +71,8 @@ This future *has* to excite you:
 
 1. Find nice and matching web component for your UI problem
 2. Add it to your bower.json, install it
-3. Use it in your HTML as it would be part of the HTML standard
+3. Import the element into your HTML
+4. Use it in your HTML as it would be part of the HTML standard
 
 ---
 
@@ -91,7 +88,7 @@ You can start **now**. (Github uses it already in production :)
 
 ---
 
-# As an example: Google maps
+# Example: Google maps
 
 ```html
 <google-map latitude="37.779"
@@ -109,11 +106,10 @@ You can start **now**. (Github uses it already in production :)
 
 ---
 
-# As an example: Voice recognision
+# Example: Voice recognition
 
 ```html
 <voice-recognition id="recognition-element">
-</voice-recognition>
 
 <script>
 document.querySelector('#recognition-element')
@@ -125,9 +121,22 @@ document.querySelector('#recognition-element')
 
 ---
 
+# Example: Resizing iframe
+
+```html
+<link rel="import" 
+  href="components/resizing-iframe.html">
+
+<iframe is="resizing-iframe"
+  src="http://www.swisstxt.ch/sport-results">
+</iframe>
+```
+
+---
+
 # Browser support August 2014
 
-* Chrome: Almost
+* Chrome: Yep
 * Firefox: Kind of
 * Safari: Nope
 * Internet Explorer: No way
@@ -136,7 +145,10 @@ document.querySelector('#recognition-element')
 
 # jQuery for web components
 
-**Polyfill for web components**, which allow web components even for Internet Explorer 9!
+**Polyfill for web components**, which allow web components for most of the browsers we support.
+Only exception is IE9 which works partly. (IE10+ is mostly fine).
+
+=> Test early but chances are good it works.
 
 https://github.com/Polymer/platform
 
@@ -152,9 +164,12 @@ https://github.com/Polymer/platform
 
 # Polymer
 
-* Based on platform.js like Mozilla Bricks.
-* On top of that: Binding
-* On top of that: Some sugar
+http://www.polymer-project.org/
+
+* Polyfill: platform.js
+* Data binding + some sugar
+* core-elements
+* paper-elements
 
 ---
 
@@ -214,13 +229,14 @@ mkdir my-timeline
 
 ---
 
-# Templates (or shadow DOM)
+# <template>
 
-HTML in template is implementation detail of component. It is called
+HTML in template is implementation detail of component
 
 ## Shadow DOM
 
-and not visible from outside DOM (light DOM).
+Not visible from "outside" DOM (light DOM).
+
 
 ---
 
@@ -282,7 +298,7 @@ Shadow DOM is in general not stylable from outside. There are some non-standardi
 
 ---
 
-# Attributes in light HTML
+# Attributes
 
 ```html
 <my-timeline duration="10">
@@ -313,15 +329,15 @@ Shadow DOM is in general not stylable from outside. There are some non-standardi
 
 ---
 
-# Polymer: bindings
+# Backend as HTML elements
 
 ```html
-<my-backend-segment duration="{{duration}}" start="{{start}}" end="{{end}}">
+<my-backend-segment duration="{{duration}}">
 <my-timeline duration="{{duration}}">
-    <my-timeline-segment start="{{start}}" end="{{end}}">
-</my-timeline>
 ```
-`my-backend-segment` encapsulates the backend API. Attributes are bound together.
+`my-backend-segment` encapsulates the backend API.
+
+Polymer does the binding between the attributes of the elements: Setting duration in `<my-backend-segment>` triggers the JS function `durationChange()` in `<my-timeline>`.
 
 ---
 
