@@ -7,6 +7,10 @@
 * Custom HTML element
 * Widgets
 
+---
+
+# What do they look like?
+
 ```html
 <fancy-card>
   <h3>Fridolin Frontend</h3>
