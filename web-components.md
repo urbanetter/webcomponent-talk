@@ -177,6 +177,14 @@ http://www.polymer-project.org/
 
 ---
 
+![fit](videoeditor-overview.png)
+
+---
+
+![fit](videoeditor-timeline.png)
+
+---
+
 # Setup
 
 ```bash
