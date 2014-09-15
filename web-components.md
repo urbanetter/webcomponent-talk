@@ -1,4 +1,4 @@
-# Web Components for non-idealists
+# Web Components for the Skeptic
 
 ---
 
@@ -138,7 +138,7 @@ document.querySelector('#recognition-element')
 
 ---
 
-# Browser support August 2014
+# Browser support September 2014
 
 * Chrome: Yep
 * Firefox: Kind of
@@ -171,13 +171,13 @@ https://github.com/Polymer/platform
 http://www.polymer-project.org/
 
 * Polyfill: platform.js
-* Data binding + some sugar
+* data binding, layout attributes + some sugar
 * core-elements
 * paper-elements
 
 ---
 
-# [fit] Let's start
+# Let's start
 
 ---
 
@@ -186,6 +186,10 @@ http://www.polymer-project.org/
 ---
 
 ![fit](videoeditor-timeline.png)
+
+---
+
+![fit](videoeditor-html.png)
 
 ---
 
