@@ -189,7 +189,13 @@ http://www.polymer-project.org/
 
 ---
 
-![fit](videoeditor-html.png)
+# Segment represents interesting part of the movie
+
+```html
+<div class="timeline">
+	<div class="timeline-segment">
+</div>
+```
 
 ---
 
